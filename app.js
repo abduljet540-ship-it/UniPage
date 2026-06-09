@@ -11,7 +11,16 @@
    MEMBER 16 — Dark Mode Toggle Logic
    ============================================================ */
 // Member 16 adds dark mode toggle logic here
+   const toggleBtn = document.createElement("button");
+toggleBtn.textContent = "Dark Mode";
+document.getElementById("theme-toggle").appendChild(toggleBtn);
 
+toggleBtn.addEventListener("click", function () {
+ document.body.classList.toggle("dark-mode");
+ toggleBtn.textContent = document.body.classList.contains("dark-mode")
+ ? "Light Mode"
+ : "Dark Mode";
+});
 /* ============================================================
    MEMBER 17 — Back to Top Button Logic
    ============================================================ */
